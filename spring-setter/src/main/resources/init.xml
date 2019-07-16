@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="myProcess" class="pack.MyProcess">
+		<property name="nai" value="25"/> <!-- nai = setter(SetNai)를 의미한다. SetNai가 SetAge로 변하면 에러난다. -->
+		<property name="name">
+			<value>홍길동</value>
+		</property>
+		<!--<property name="class1" ref="tClass"></property>-->
+		<property name="class1">
+			<bean class="pack.TestClass"/>
+		</property>
+	</bean>
+	<bean id="tClass" class="pack.TestClass"/>
+</beans>
