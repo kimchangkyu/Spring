@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- 
+	<bean id="senderProcess" class="spr6anno.SenderProcess">
+		<property name="inter"> 	
+			<bean class="spr6anno.Sender1"></bean>
+		</property> 
+	</bean>
+	 -->
+	 <!-- @(Annotation)를 사용하고있는 것을 알려주어야 한다. spring은 xml파일 부터 읽기 때문이다.-->
+	 <!-- @(Annotation)을 사용하는 경우 -->
+	 <!-- Annotation을 사용해서 xml의 의존성에서 벗어난다 ==> 요즘 방법 -->
+	 <context:annotation-config/>
+	 <context:component-scan base-package="spr6anno"></context:component-scan> <!-- base-package="spr6anno" : 패키지 이름을 넣어준다. -->
+	 <!-- 패키지의 수에 따라서 scan을 해주면 된다. -->
+</beans>
