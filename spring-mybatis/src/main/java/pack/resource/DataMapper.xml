@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sql문을 밖으로 내보내는 것 ==>mybatis -->
+<mapper namespace="dev">
+      <select id="selectDataAll" resultType="dto"> <!-- 클래스가 selectDataAll를 부르면된다. --> <!-- select의 결과를 dto에 담긴다. --> <!-- 리스트로 받는다. -->
+            select * from sangdata
+      </select>
+</mapper>
